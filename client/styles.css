@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(251, 248, 248);
+}
+
+/*
+=============
+Navbar Styles
+=============
+*/
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 3em 1em 3em;
+  align-items: center;
+  background: blue;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.navbar-right {
+  margin: 1em;
+}
+
+.navbar-right > * {
+  margin-right: 1em;
+}
+
+.navbar-container button {
+  border-color: transparent;
+  border-radius: 15px;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: white;
+  cursor: pointer;
+}
+
+.navbar-container button:hover {
+  background-color: rgb(251, 240, 118);
+}
+
+/*
+==============
+Landing Styles
+==============
+*/
+
+.landing-container {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
