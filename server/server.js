@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const PORT = 3000;
 
 // Define routes here
+const audioRoutes = require('./routes/audioRoutes');
 
 const app = express();
 
@@ -20,7 +21,13 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client')));
 }
 
+app.use('/api/audio', audioRoutes, (req, res) => {
+  console.log('api/audio hit');
+  return res.sendStatus(200);
+});
+
 app.use('/', (req, res) => {
+  console.log('test');
   return res.sendStatus(200);
 });
 

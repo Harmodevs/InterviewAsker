@@ -41,7 +41,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg$/,
+        test: [/\.svg$/, /\.mp3$/],
         use: 'file-loader',
       },
     ],
@@ -62,7 +62,7 @@ module.exports = {
       publicPath: '/dist',
     },
     proxy: {
-      '/api/**': {
+      '/api': {
         target: 'http://localhost:3000',
         secure: false,
       },
