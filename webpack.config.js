@@ -22,6 +22,11 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.tsx?$/,
+        exclude: /(node_modules)/,
+        use: 'ts-loader',
+      },
+      {
         test: /\.module\.css$/,
         use: [
           'style-loader',
@@ -56,7 +61,7 @@ module.exports = {
     port: 8080,
     hot: true,
     historyApiFallback: true,
-    headers: {'Access-Control-Allow-Origin': '*'},
+    headers: { 'Access-Control-Allow-Origin': '*' },
     static: {
       directory: path.resolve(__dirname, 'dist'),
       publicPath: '/dist',
@@ -69,6 +74,6 @@ module.exports = {
     },
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
 };
