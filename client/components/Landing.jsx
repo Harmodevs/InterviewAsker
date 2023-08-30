@@ -1,18 +1,18 @@
-import React from 'react';
-import axios from 'axios';
-import playAudio from '../utils/playAudio';
+import React from "react";
+import axios from "axios";
+import playAudio from "../utils/playAudio";
 
 function Landing() {
   async function playQuestion() {
-    const response = await axios.get('/api/audio/1', {
-      responseType: 'arraybuffer',
+    const response = await axios.get("/api/audio/1", {
+      responseType: "arraybuffer",
     });
 
     playAudio(response.data);
   }
   return (
-    <div className='landing-container'>
-      <div className='landing-content'>
+    <div className="landing-container">
+      <div className="landing-content">
         <h1>Practice Your Interview Questions</h1>
         <h2>Record Your Interview Answers!</h2>
         <p>
